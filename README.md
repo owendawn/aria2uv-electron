@@ -1,22 +1,15 @@
-# electron
+# Aria2-electron
 
-> An electron-vue project
+aria2 web gui
 
-#### Build Setup
+BaiduExporter官方github
+<br>
+[< - 链接 - >](https://github.com/acgotaku/BaiduExporter)
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:9080
-npm run dev
-
-# build electron application for production
-npm run build
+BaiduExporter官方改，去除16连接数
+<br>
+[< - 链接 - >](https://github.com/owendawn/Aria2UV-vuejs/raw/master/BaiduExporter_改_去除16连接限制.crx)
 
 
-```
-
----
-
-This project was generated with [electron-vue](https://github.com/SimulatedGREG/electron-vue) using [vue-cli](https://github.com/vuejs/vue-cli). Documentation about the original structure can be found [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+The screenshot of gui desktop  is shown below.
+![桌面样例](https://github.com/owendawn/aria2uv-electron/raw/master/desktop.PNG)
