@@ -1,18 +1,28 @@
 import Vue from 'vue'
-import axios from 'axios'
+import Vuex from 'vuex';
+Vue.use(Vuex);
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
 
-import App from './App'
-import router from './router'
-import store from './store'
+import './assets/styles/base.scss'
+import router from './router/router.js'
+import componentLibs from './components/component.js'
+import App from './page/index.vue'
 
-if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
-Vue.http = Vue.prototype.$http = axios
-Vue.config.productionTip = false
+componentLibs.install(Vue)
 
-/* eslint-disable no-new */
+//import axios from 'axios'
+//axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+//axios.defaults.baseURL = 'http://localhost:18080'
+//Vue.prototype.$axios = axios
+
+const root = document.createElement("div")
+root.id = "root"
+document.body.appendChild(root)
+
 new Vue({
-  components: { App },
+  el: '#root',
   router,
-  store,
-  template: '<App/>'
-}).$mount('#app')
+  render: (h)=>h(App)
+})

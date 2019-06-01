@@ -19,8 +19,14 @@ function createWindow () {
    */
   mainWindow = new BrowserWindow({
     height: 563,
-    useContentSize: true,
-    width: 1000
+    //useContentSize: true,
+    width: 950,
+    resizable:false,
+    icon:'../../static/dun.ico',
+    webPreferences:{
+      zoomFactor:0.9,
+      webSecurity:false
+    }
   })
 
   mainWindow.loadURL(winURL)
