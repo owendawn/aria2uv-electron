@@ -154,43 +154,28 @@
         label="链接详情"
         v-if="this.$props.todo.status==='active'"
       >
-        <el-table
-          :data="this.getPeersTable()"
-          style="width: 100%;"
-        >
-          <el-table-column
-            prop="name"
-            label="位置"
-            width="280"
-          >
-          </el-table-column>
-          <el-table-column
-            prop="type"
-            label="客户端"
-            width="180"
-          >
-          </el-table-column>
-          <el-table-column
-            prop="percent"
-            label="完成率"
-          >
-          </el-table-column>
-          <el-table-column
-            prop="downloadSpeedStr"
-            label="下载速度"
-          >
-          </el-table-column>
-          <el-table-column
-            prop="uploadSpeedStr"
-            label="上传速度"
-          >
-          </el-table-column>
-          <el-table-column
-            prop="state"
-            label="状态"
-          >
-          </el-table-column>
-        </el-table>
+        <table style="width:100%;text-align: center;">
+          <thead>
+          <tr>
+            <th>位置</th>
+            <th>客户端</th>
+            <th>完成率</th>
+            <th>下载速度</th>
+            <th>上传速度</th>
+            <th>状态</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="it in this.getPeersTable()">
+            <td>{{it.name}}</td>
+            <td>{{it.type}}</td>
+            <td>{{it.percent}}</td>
+            <td>{{it.downloadSpeedStr}}</td>
+            <td>{{it.uploadSpeedStr}}</td>
+            <td>{{it.state}}</td>
+          </tr>
+          </tbody>
+        </table>
       </el-tab-pane>
     </el-tabs>
   </el-collapse-item>
