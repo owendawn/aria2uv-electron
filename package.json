@@ -23,7 +23,8 @@
     "artifactName": "${productName}-${version}-${arch}.${ext}",
     "nsis": {
       "artifactName": "${productName}-${version}-${arch}.${ext}",
-      "allowToChangeInstallationDirectory":true
+      "allowToChangeInstallationDirectory":true,
+      "oneClick":false
     },
     "directories": {
       "output": "build"
