@@ -152,7 +152,7 @@
       </el-tab-pane>
       <el-tab-pane
         label="链接详情"
-        v-if="this.$props.todo.status==='active'&&this.getPeersTable().length>0"
+        v-if="this.$props.todo.status==='active'"
       >
         <el-table
           :data="this.getPeersTable()"
